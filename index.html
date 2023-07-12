@@ -4,9 +4,64 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Resume</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <style>
-            td{
-                border:1px solid #cccccc;
+            body{ 
+                font-family: Hind;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                color: #7A7A7A;
+            }
+
+            header{
+                border-top:5px solid #BF7936;
+                border-bottom:1px solid #D8D8D8;
+            }
+
+            footer{
+                border-top:1px solid #D8D8D8;
+            }
+
+            #name{
+                color: #212121;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            
+            .heading, .section-heading{
+                color: #212121;
+                font-size: 15px;
+                font-weight: 700;
+            }
+
+            .li-heading{
+                color:#212121;
+                font-weight: 600px;
+            }
+
+            #txtMessage{
+                width:100%;
+                height: 94px;
+                border-radius: 6px;
+                border: 1px solid #EAEAEA;
+                background: #FCFCFC;
+                resize: none;
+            }
+
+            #btnSendMessage{
+                width: 155px;
+                height: 36px;
+                border-radius: 6px;
+                background: #1993EB;
+                color: #FFF;
+                text-align: center;
+                font-size: 12px;
+                font-weight: 400;
+                border: none;
             }
         </style>
     </head>
@@ -14,13 +69,13 @@
         <header>
             <table>
                 <tr>
-                    <td>
-                        <img src="./assets/img/photo.png" /> <!-- Relative Path -->
+                    <td id="profilepic-container">
+                        <img id="profile-pic" src="./assets/img/photo.png" />
                     </td>
-                    <td>
-                        <div>Vivaan Shekhar Sharma</div>
-                        <div>vivaanss@gmail.com   |   +91 9733259550   |   www.vivaanss.me   |   Mumbai</div>
-                        <div>United College Of Engineering, Mumbai</div>
+                    <td id="profileinfo-container">
+                        <div id="name">Vivaan Shekhar Sharma</div>
+                        <div id="info">vivaanss@gmail.com   |   +91 9733259550   |   www.vivaanss.me   |   Mumbai</div>
+                        <div id="college">United College Of Engineering, Mumbai</div>
                     </td>
                 </tr>
             </table>
@@ -39,21 +94,27 @@
                                 <ul>
                                     <li>
                                         <div class="li-heading">Bachelor of Technology (B.Tech)</div>
-                                        <div class="li-content">2015 - 2019
-                                            United College of Engineering, Mumbai University
-                                            Score: 3.4/4.0 GPA</div>
+                                        <div class="li-content">
+                                            2015 - 2019<br/>
+                                            United College of Engineering, Mumbai University<br/>
+                                            Score: 3.4/4.0 GPA
+                                        </div>
                                     </li>
                                     <li>
                                         <div class="li-heading">Higher Secondary (XII)</div>
-                                        <div class="li-content">2015
-                                            St. Stephens High School, Mumbai
-                                            Score: 86%</div>
+                                        <div class="li-content">
+                                            2015<br/>
+                                            St. Stephens High School, Mumbai<br/>
+                                            Score: 86%
+                                        </div>
                                     </li>
                                     <li>
                                         <div class="li-heading">High School (X)</div>
-                                        <div class="li-content">2013
-                                            St. Stephens High School, Mumbai
-                                            Score: 90%</div>
+                                        <div class="li-content">
+                                            2013<br/>
+                                            St. Stephens High School, Mumbai<br/>
+                                            Score: 90%
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -139,7 +200,7 @@
             </table>
         </main>
         <footer>
-            <div class="heading">Projects</div>
+            <div class="heading">Get In Touch</div>
             <div class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum quas molestias sint.</div>
             <div class="form">
                 <div><textarea id="txtMessage"></textarea></div>
