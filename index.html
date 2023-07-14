@@ -4,34 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Resume</title>
-        <link rel="stylesheet" href="assets/css/main.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
         <style>
-            body{ 
-                font-family: Hind;
+            html{
+                font-family: 'Hind', sans-serif;
+                color: #7A7A7A;
                 font-size: 14px;
                 font-style: normal;
-                font-weight: 400;
-                color: #7A7A7A;
             }
 
             header{
-                border-top:5px solid #BF7936;
-                border-bottom:1px solid #D8D8D8;
+                border-top: 5px solid #BF7936;
+                border-bottom: 1px solid #D8D8D8;
             }
-
-            footer{
-                border-top:1px solid #D8D8D8;
-            }
-
+            
             #name{
                 color: #212121;
                 font-size: 24px;
                 font-weight: 700;
             }
-            
+
+            #info, #college{
+                font-size:15px;
+            }
+
             .heading, .section-heading{
                 color: #212121;
                 font-size: 15px;
@@ -39,12 +37,21 @@
             }
 
             .li-heading{
-                color:#212121;
-                font-weight: 600px;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .text-light{
+                color: #979797;
+            }
+
+            footer{
+                border-top: 1px solid #D8D8D8;
             }
 
             #txtMessage{
-                width:100%;
+                width: 100%;
                 height: 94px;
                 border-radius: 6px;
                 border: 1px solid #EAEAEA;
@@ -55,14 +62,13 @@
             #btnSendMessage{
                 width: 155px;
                 height: 36px;
+                border:none;
                 border-radius: 6px;
                 background: #1993EB;
                 color: #FFF;
-                text-align: center;
                 font-size: 12px;
-                font-weight: 400;
-                border: none;
             }
+
         </style>
     </head>
     <body>
@@ -70,7 +76,7 @@
             <table>
                 <tr>
                     <td id="profilepic-container">
-                        <img id="profile-pic" src="./assets/img/photo.png" />
+                        <img id="profilepic" src="./assets/img/photo.png" />
                     </td>
                     <td id="profileinfo-container">
                         <div id="name">Vivaan Shekhar Sharma</div>
@@ -79,11 +85,11 @@
                     </td>
                 </tr>
             </table>
-        </header>
+        </header> <!-- Semantic Tags -->
         <main>
             <table>
                 <tr>
-                    <td>
+                    <td id="main-leftcol">
                         <section id="profile">
                             <div class="section-heading">Profile</div>
                             <div class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</div>
@@ -135,7 +141,7 @@
                             </div>
                         </section>
                     </td>
-                    <td>
+                    <td id="main-rightcol">
                         <section id="internships">
                             <div class="section-heading">Internships</div>
                             <div class="section-content">
@@ -143,14 +149,14 @@
                                     <li>
                                         <div class="li-heading">Fullstack Development Intern, Infosoft</div>
                                         <div class="li-content">
-                                            <div>Jan 2023 - Present</div>
+                                            <div class="text-light">Jan 2023 - Present</div>
                                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                                         </div>
                                     </li>
                                     <li>
                                         <div class="li-heading">Frontend Development Intern, FireWeb</div>
                                         <div class="li-content">
-                                            <div>Dec 2022- Apr 2021</div>
+                                            <div class="text-light">Dec 2022- Apr 2021</div>
                                             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
                                         </div>
                                     </li>
@@ -164,15 +170,15 @@
                                     <li>
                                         <div class="li-heading">Complete Web Development Bootcamp - MERN Stack</div>
                                         <div class="li-content">
-                                            <div>Udemy.com</div>
-                                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat.    
+                                            <div class="text-light">Udemy.com</div>
+                                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat.
                                         </div>
                                     </li>
                                     <li>
                                         <div class="li-heading">AWS Cloud Fundamentals</div>
                                         <div class="li-content">
-                                            <div>aCloudGuru.com</div>
-                                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi cons equ uatur.    
+                                            <div class="text-light">aCloudGuru.com</div>
+                                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi cons equ uatur.
                                         </div>
                                     </li>
                                 </ul>
@@ -184,9 +190,7 @@
                                 <ul>
                                     <li>
                                         <div class="li-heading">Event Management Process Automation</div>
-                                        <div class="li-content">
-                                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo pariatur
-                                        </div>
+                                        <div class="li-content">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo pariatur</div>
                                     </li>
                                     <li>
                                         <div class="li-heading">Developing Highly Scalable REST Services</div>
@@ -201,8 +205,8 @@
         </main>
         <footer>
             <div class="heading">Get In Touch</div>
-            <div class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum quas molestias sint.</div>
-            <div class="form">
+            <div class="text-label">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum quas molestias sint.</div>
+            <div id="form-container">
                 <div><textarea id="txtMessage"></textarea></div>
                 <div><button id="btnSendMessage">Send Message</button></div>
             </div>
