@@ -15,9 +15,21 @@
                 font-style: normal;
             }
 
+            body{
+                width:900px;
+                padding:0px 60px;
+                margin:0 auto;
+            }
+
             header{
+                width:100%;
                 border-top: 5px solid #BF7936;
                 border-bottom: 1px solid #D8D8D8;
+                padding: 26px 0px;
+            }
+
+            main{
+                width:100%;
             }
             
             #name{
@@ -47,6 +59,7 @@
             }
 
             footer{
+                width:100%;
                 border-top: 1px solid #D8D8D8;
             }
 
@@ -68,19 +81,23 @@
                 color: #FFF;
                 font-size: 12px;
             }
-
+            
+            .separator{
+                padding:0px 20px;
+                color:#e5e5e5;
+            }
         </style>
     </head>
     <body>
         <header>
-            <table>
+            <table style="width:100%" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td id="profilepic-container">
+                    <td id="profilepic-container" style="width:100px;vertical-align:top;">
                         <img id="profilepic" src="./assets/img/photo.png" />
                     </td>
-                    <td id="profileinfo-container">
+                    <td id="profileinfo-container" style="padding:0px 26px;vertical-align:top">
                         <div id="name">Vivaan Shekhar Sharma</div>
-                        <div id="info">vivaanss@gmail.com   |   +91 9733259550   |   www.vivaanss.me   |   Mumbai</div>
+                        <div id="info" style="margin: 0px 0px 5px 0px">vivaanss@gmail.com<span class="separator">|</span>+91 9733259550<span class="separator">|</span>www.vivaanss.me<span class="separator">|</span>Mumbai</div>
                         <div id="college">United College Of Engineering, Mumbai</div>
                     </td>
                 </tr>
