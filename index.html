@@ -21,6 +21,12 @@
                 margin:0 auto;
             }
 
+            ul{
+                margin-block-start: 0px;
+                margin-block-end: 0px;
+                padding-inline-start: 18px;
+            }
+
             header{
                 width:100%;
                 border-top: 5px solid #BF7936;
@@ -30,6 +36,7 @@
 
             main{
                 width:100%;
+                padding:26px 0px;
             }
             
             #name{
@@ -42,16 +49,40 @@
                 font-size:15px;
             }
 
+            main section{
+                margin-bottom:26px;
+            }
+
+            main .section-content{
+                text-align:justify;
+            }
+
+            #main-leftcol{
+                vertical-align: top;
+                width:50%;
+            } 
+
+            #main-rightcol{
+                vertical-align: top;
+                padding-left:26px;
+                width:50%;
+            }
+
             .heading, .section-heading{
                 color: #212121;
                 font-size: 15px;
                 font-weight: 700;
+                margin-bottom:17px;
             }
 
             .li-heading{
                 color: #212121;
                 font-size: 14px;
                 font-weight: 500;
+            }
+            
+            .li-content{
+                margin-bottom:16px;
             }
 
             .text-light{
@@ -61,6 +92,7 @@
             footer{
                 width:100%;
                 border-top: 1px solid #D8D8D8;
+                padding:26px 0px;
             }
 
             #txtMessage{
@@ -70,6 +102,8 @@
                 border: 1px solid #EAEAEA;
                 background: #FCFCFC;
                 resize: none;
+                box-sizing: border-box;
+                padding: 5px;
             }
 
             #btnSendMessage{
@@ -103,8 +137,8 @@
                 </tr>
             </table>
         </header> <!-- Semantic Tags -->
-        <main>
-            <table>
+        <main id="mainContent">
+            <table style="width:100%" cellpadding="0" cellspacing="0">
                 <tr>
                     <td id="main-leftcol">
                         <section id="profile">
@@ -225,7 +259,7 @@
             <div class="text-label">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum quas molestias sint.</div>
             <div id="form-container">
                 <div><textarea id="txtMessage"></textarea></div>
-                <div><button id="btnSendMessage">Send Message</button></div>
+                <div style="text-align:right"><button id="btnSendMessage">Send Message</button></div>
             </div>
         </footer>
     </body>
