@@ -74,12 +74,19 @@
             #main-leftcol{
                 vertical-align: top;
                 width:50%;
+                padding-right:13px;
+                box-sizing: border-box;
+                float:left;
+                
+                
             } 
 
             #main-rightcol{
                 vertical-align: top;
-                padding-left:26px;
                 width:50%;
+                padding-left:13px;
+                box-sizing: border-box;
+                float:right;
             }
 
             .heading, .section-heading{
@@ -135,6 +142,12 @@
                 color:#e5e5e5;
             }
 
+            .clearfix::after{
+                clear:both;
+                display:table;
+                content:""
+            }
+
             
         </style>
     </head>
@@ -144,135 +157,176 @@
         </div>
         <div style="width:60px;height:60px;background:#1993EB;position:fixed;bottom:50px;right:200px;border-radius:50%;z-index:100;"></div>
         <header>
-            <table style="width:100%" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td id="profilepic-container" style="width:100px;vertical-align:top;">
-                        <img id="profilepic" src="./assets/img/photo.png" />
-                    </td>
-                    <td id="profileinfo-container" style="padding:0px 26px;vertical-align:top">
-                        <div id="name">Vivaan Shekhar Sharma</div>
-                        <div id="info" style="margin: 0px 0px 5px 0px">vivaanss@gmail.com<span class="separator">|</span>+91 9733259550<span class="separator">|</span>www.vivaanss.me<span class="separator">|</span>Mumbai</div>
-                        <div id="college">United College Of Engineering, Mumbai</div>
-                    </td>
-                </tr>
-            </table>
+            <div>
+                <div id="profilepic-container" style="width:100px;vertical-align:top;float:left;margin-right:26px;">
+                    <img id="profilepic" src="./assets/img/photo.png" />
+                </div>
+                <div id="profileinfo-container" style="padding:0px 26px;vertical-align:top;">
+                    <div id="name">Vivaan Shekhar Sharma</div>
+                    <div id="info" style="margin: 0px 0px 5px 0px">vivaanss@gmail.com<span class="separator">|</span>+91 9733259550<span class="separator">|</span>www.vivaanss.me<span class="separator">|</span>Mumbai</div>
+                    <div id="college">United College Of Engineering, Mumbai</div>
+                </div>
+            </div>
         </header>
         <main id="mainContent" style="">
-            <table style="width:100%" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td id="main-leftcol">
-                        <section id="profile">
-                            <div class="section-heading">Profile</div>
-                            <div class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</div>
-                        </section>
-                        <section id="education">
-                            <div class="section-heading">Education</div>
-                            <div class="section-content">
-                                <ul>
-                                    <li>
-                                        <div class="li-heading">Bachelor of Technology (B.Tech)</div>
-                                        <div class="li-content">
-                                            2015 - 2019<br/>
-                                            United College of Engineering, Mumbai University<br/>
-                                            Score: 3.4/4.0 GPA
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="li-heading">Higher Secondary (XII)</div>
-                                        <div class="li-content">
-                                            2015<br/>
-                                            St. Stephens High School, Mumbai<br/>
-                                            Score: 86%
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="li-heading">High School (X)</div>
-                                        <div class="li-content">
-                                            2013<br/>
-                                            St. Stephens High School, Mumbai<br/>
-                                            Score: 90%
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section id="skills">
-                            <div class="section-heading">Key Skills</div>
-                            <div class="section-content">
-                                <ul>
-                                    <li>
-                                        <div class="li-heading">Technical</div>
-                                        <div class="li-content">Figma, Sketch, Photoshop, Illustrator, Html/Css, Premiere Pro, After Effects</div>
-                                    </li>
-                                    <li>
-                                        <div class="li-heading">Non-Technical</div>
-                                        <div class="li-content">Communication, Time management, Teamwork, Creativity, Attention to details, Desire to learn, Meeting deadlines</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                    </td>
-                    <td id="main-rightcol">
-                        <section id="internships">
-                            <div class="section-heading">Internships</div>
-                            <div class="section-content">
-                                <ul>
-                                    <li>
-                                        <div class="li-heading">Fullstack Development Intern, Infosoft</div>
-                                        <div class="li-content">
-                                            <div class="text-light">Jan 2023 - Present</div>
-                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="li-heading">Frontend Development Intern, FireWeb</div>
-                                        <div class="li-content">
-                                            <div class="text-light">Dec 2022- Apr 2021</div>
-                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section id="trainings">
-                            <div class="section-heading">Trainings</div>
-                            <div class="section-content">
-                                <ul>
-                                    <li>
-                                        <div class="li-heading">Complete Web Development Bootcamp - MERN Stack</div>
-                                        <div class="li-content">
-                                            <div class="text-light">Udemy.com</div>
-                                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="li-heading">AWS Cloud Fundamentals</div>
-                                        <div class="li-content">
-                                            <div class="text-light">aCloudGuru.com</div>
-                                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi cons equ uatur.
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section id="projects">
-                            <div class="section-heading">Projects</div>
-                            <div class="section-content">
-                                <ul>
-                                    <li>
-                                        <div class="li-heading">Event Management Process Automation</div>
-                                        <div class="li-content">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo pariatur</div>
-                                    </li>
-                                    <li>
-                                        <div class="li-heading">Developing Highly Scalable REST Services</div>
-                                        <div class="li-content">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con seq.</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                    </td>
-                </tr>
-            </table>
+            
+            <div class="clearfix">
+                <div id="main-leftcol">
+                    <section id="profile">
+                        <div class="section-heading">Profile</div>
+                        <div class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</div>
+                    </section>
+                    <section id="education">
+                        <div class="section-heading">Education</div>
+                        <div class="section-content">
+                            <ul>
+                                <li>
+                                    <div class="li-heading">Bachelor of Technology (B.Tech)</div>
+                                    <div class="li-content">
+                                        2015 - 2019<br/>
+                                        United College of Engineering, Mumbai University<br/>
+                                        Score: 3.4/4.0 GPA
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li-heading">Higher Secondary (XII)</div>
+                                    <div class="li-content">
+                                        2015<br/>
+                                        St. Stephens High School, Mumbai<br/>
+                                        Score: 86%
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li-heading">High School (X)</div>
+                                    <div class="li-content">
+                                        2013<br/>
+                                        St. Stephens High School, Mumbai<br/>
+                                        Score: 90%
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="skills">
+                        <div class="section-heading">Key Skills</div>
+                        <div class="section-content">
+                            <ul>
+                                <li>
+                                    <div class="li-heading">Technical</div>
+                                    <div class="li-content">Figma, Sketch, Photoshop, Illustrator, Html/Css, Premiere Pro, After Effects</div>
+                                </li>
+                                <li>
+                                    <div class="li-heading">Non-Technical</div>
+                                    <div class="li-content">Communication, Time management, Teamwork, Creativity, Attention to details, Desire to learn, Meeting deadlines</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div id="main-rightcol">
+                    <section id="internships">
+                        <div class="section-heading">Internships</div>
+                        <div class="section-content">
+                            <ul>
+                                <li>
+                                    <div class="li-heading">Fullstack Development Intern, Infosoft</div>
+                                    <div class="li-content">
+                                        <div class="text-light">Jan 2023 - Present</div>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li-heading">Frontend Development Intern, FireWeb</div>
+                                    <div class="li-content">
+                                        <div class="text-light">Dec 2022- Apr 2021</div>
+                                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="trainings">
+                        <div class="section-heading">Trainings</div>
+                        <div class="section-content">
+                            <ul>
+                                <li>
+                                    <div class="li-heading">Complete Web Development Bootcamp - MERN Stack</div>
+                                    <div class="li-content">
+                                        <div class="text-light">Udemy.com</div>
+                                        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li-heading">AWS Cloud Fundamentals</div>
+                                    <div class="li-content">
+                                        <div class="text-light">aCloudGuru.com</div>
+                                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi cons equ uatur.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="projects">
+                        <div class="section-heading">Projects</div>
+                        <div class="section-content">
+                            <ul>
+                                <li>
+                                    <div class="li-heading">Event Management Process Automation</div>
+                                    <div class="li-content">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo pariatur</div>
+                                </li>
+                                <li>
+                                    <div class="li-heading">Developing Highly Scalable REST Services</div>
+                                    <div class="li-content">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con seq.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            
+            <div>
+                <hr/>
+                <br/>
+                <div class="section-heading">Float Demo 1 : Float Left</div>
+                <div style="text-align:justify;">
+                    <img src="https://is3-ssl.mzstatic.com/image/thumb/ZypiNEdbU0wwCF0GMJ3zoA/1200x675mf.jpg" style="border-radius:10px;margin:5px 20px 5px 0px;float:left;width:100px;"/>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati rem repellendus aut animi suscipit unde tenetur officiis sed, dolorum corrupti, deleniti labore odio illum, quae officia in voluptas quibusdam! Nesciunt, quia laboriosam maiores consequatur officia unde voluptatem deserunt debitis, recusandae quas, laborum ad. Sed necessitatibus maxime vero laboriosam, enim impedit maiores molestias temporibus, aut quae blanditiis natus. Excepturi blanditiis delectus recusandae odio minima dicta aut debitis numquam natus fuga modi, maiores laborum cupiditate qui quis dolore, quibusdam nobis? Modi labore at accusamus nihil dolor dolorum repellat quam ea vitae necessitatibus! Recusandae aliquid id consequuntur reiciendis distinctio obcaecati vel? Accusamus, debitis?
+                </div>
+                <br/>
+                <div class="section-heading">Float Demo 2 : Float Right</div>
+                <div style="text-align:justify;">
+                    <img src="https://is3-ssl.mzstatic.com/image/thumb/ZypiNEdbU0wwCF0GMJ3zoA/1200x675mf.jpg" style="border-radius:10px;margin:5px 0px 5px 20px;float:right;width:100px;"/>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati rem repellendus aut animi suscipit unde tenetur officiis sed, dolorum corrupti, deleniti labore odio illum, quae officia in voluptas quibusdam! Nesciunt, quia laboriosam maiores consequatur officia unde voluptatem deserunt debitis, recusandae quas, laborum ad. Sed necessitatibus maxime vero laboriosam, enim impedit maiores molestias temporibus, aut quae blanditiis natus. Excepturi blanditiis delectus recusandae odio minima dicta aut debitis numquam natus fuga modi, maiores laborum cupiditate qui quis dolore, quibusdam nobis? Modi labore at accusamus nihil dolor dolorum repellat quam ea vitae necessitatibus! Recusandae aliquid id consequuntur reiciendis distinctio obcaecati vel? Accusamus, debitis?
+                </div>
+                <br/>
+                <div class="section-heading">Float Demo 3 : Float Left & Right</div>
+                <div style="text-align:justify;">
+                    <img src="https://is3-ssl.mzstatic.com/image/thumb/ZypiNEdbU0wwCF0GMJ3zoA/1200x675mf.jpg" style="border-radius:10px;margin:5px 20px 5px 0px;float:left;width:100px;"/>
+                    <img src="https://playcontestofchampions.com/wp-content/uploads/2021/11/champion-iron-man-infinity-war-720x720.jpg" style="border-radius:10px;margin:5px 0px 5px 20px;float:right;width:78px;"/>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati rem repellendus aut animi suscipit unde tenetur officiis sed, dolorum corrupti, deleniti labore odio illum, quae officia in voluptas quibusdam! Nesciunt, quia laboriosam maiores consequatur officia unde voluptatem deserunt debitis, recusandae quas, laborum ad. Sed necessitatibus maxime vero laboriosam, enim impedit maiores molestias temporibus, aut quae blanditiis natus. Excepturi blanditiis delectus recusandae odio minima dicta aut debitis numquam natus fuga modi, maiores laborum cupiditate qui quis dolore, quibusdam nobis? Modi labore at accusamus nihil dolor dolorum repellat quam ea vitae necessitatibus! Recusandae aliquid id consequuntur reiciendis distinctio obcaecati vel? Accusamus, debitis?
+                </div>
+                <br/>
+                <div class="section-heading">Float Demo 4 : Float Left & Left</div>
+                <div style="text-align:justify;">
+                    <img src="https://is3-ssl.mzstatic.com/image/thumb/ZypiNEdbU0wwCF0GMJ3zoA/1200x675mf.jpg" style="border-radius:10px;margin:5px 20px 5px 0px;float:left;width:100px;"/>
+                    <img src="https://playcontestofchampions.com/wp-content/uploads/2021/11/champion-iron-man-infinity-war-720x720.jpg" style="border-radius:10px;margin:5px 20px 5px 0px;float:left;width:78px;"/>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati rem repellendus aut animi suscipit unde tenetur officiis sed, dolorum corrupti, deleniti labore odio illum, quae officia in voluptas quibusdam! Nesciunt, quia laboriosam maiores consequatur officia unde voluptatem deserunt debitis, recusandae quas, laborum ad. Sed necessitatibus maxime vero laboriosam, enim impedit maiores molestias temporibus, aut quae blanditiis natus. Excepturi blanditiis delectus recusandae odio minima dicta aut debitis numquam natus fuga modi, maiores laborum cupiditate qui quis dolore, quibusdam nobis? Modi labore at accusamus nihil dolor dolorum repellat quam ea vitae necessitatibus! Recusandae aliquid id consequuntur reiciendis distinctio obcaecati vel? Accusamus, debitis?
+                </div>
+                <br/>
+                <div class="section-heading">Float Demo 5 : Float Right & Right</div>
+                <div style="text-align:justify;">
+                    <img src="https://is3-ssl.mzstatic.com/image/thumb/ZypiNEdbU0wwCF0GMJ3zoA/1200x675mf.jpg" style="border-radius:10px;margin:5px 0px 5px 20px;float:right;width:100px;"/>
+                    <img src="https://playcontestofchampions.com/wp-content/uploads/2021/11/champion-iron-man-infinity-war-720x720.jpg" style="border-radius:10px;margin:5px 0px 5px 20px;float:right;width:78px;"/>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati rem repellendus aut animi suscipit unde tenetur officiis sed, dolorum corrupti, deleniti labore odio illum, quae officia in voluptas quibusdam! Nesciunt, quia laboriosam maiores consequatur officia unde voluptatem deserunt debitis, recusandae quas, laborum ad. Sed necessitatibus maxime vero laboriosam, enim impedit maiores molestias temporibus, aut quae blanditiis natus. Excepturi blanditiis delectus recusandae odio minima dicta aut debitis numquam natus fuga modi, maiores laborum cupiditate qui quis dolore, quibusdam nobis? Modi labore at accusamus nihil dolor dolorum repellat quam ea vitae necessitatibus! Recusandae aliquid id consequuntur reiciendis distinctio obcaecati vel? Accusamus, debitis?
+                </div>
+                <br/>
+                <div class="section-heading">Float Demo 6 : Making Columns Using Floating Divs</div>
+                <div class="clearfix" style="border:1px solid #cccccc">
+                    <div style="width:33%;padding:15px;box-sizing:border-box;text-align:justify;float:left">1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, sint illum suscipit neque quo aspernatur ?</div>
+                    <div style="width:34%;padding:15px;box-sizing:border-box;text-align:justify;float:left">2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque rerum consequatur reiciendis cum aspernatur pariatur quisquam laboriosam </div>
+                    <div style="width:33%;padding:15px;box-sizing:border-box;text-align:justify;float:left">3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ex amet quis perspiciatis deb</div>
+                </div>
+            </div>
         </main>
         <footer>
             <div class="heading">Get In Touch</div>
