@@ -16,9 +16,11 @@
             }
 
             body{
-                width:900px;
+                width:100%;
+                max-width:1020px;
                 padding:0px 60px;
                 margin:0 auto;
+                box-sizing: border-box;
             }
 
             ul{
@@ -28,7 +30,7 @@
             }
 
             .pre-header{
-                width:900px;
+                width:100%;
                 height:18px;
                 background: #bf7936;
                 color:#ffffff;
@@ -39,7 +41,7 @@
             }
 
             header{
-                width:900px;
+                width:100%;
                 border-top: 5px solid #BF7936;
                 border-bottom: 1px solid #D8D8D8;
                 padding: 26px 0px;
@@ -76,9 +78,7 @@
                 width:50%;
                 padding-right:13px;
                 box-sizing: border-box;
-                float:left;
-                
-                
+                float:left;                            
             } 
 
             #main-rightcol{
@@ -147,7 +147,6 @@
                 display:table;
                 content:""
             }
-
             
         </style>
     </head>
@@ -282,8 +281,7 @@
                         </div>
                     </section>
                 </div>
-            </div>
-            
+            </div>            
             <div>
                 <hr/>
                 <br/>
@@ -325,6 +323,40 @@
                     <div style="width:33%;padding:15px;box-sizing:border-box;text-align:justify;float:left">1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, sint illum suscipit neque quo aspernatur ?</div>
                     <div style="width:34%;padding:15px;box-sizing:border-box;text-align:justify;float:left">2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque rerum consequatur reiciendis cum aspernatur pariatur quisquam laboriosam </div>
                     <div style="width:33%;padding:15px;box-sizing:border-box;text-align:justify;float:left">3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ex amet quis perspiciatis deb</div>
+                </div>
+            </div>
+            <div>
+                <hr/>
+                <br/>
+                <style>
+                    .flex-container{
+                        border: 1px solid #ccc;
+                        box-sizing:border-box;
+                        height:600px;
+                        
+                        display:flex;
+                        flex-direction:row;  /*main-axis (X) cross-axis (Y)*/
+                        flex-wrap:wrap;
+                        justify-content: flex-start;
+                        align-content: flex-start;                         
+                        align-items:flex-start;
+                        /*gap:10px 20px;*/
+                    }
+
+                    .flex-item{
+                        flex-basis:33%;
+                        padding:15px;
+                        box-sizing: border-box;
+                        text-align: justify;
+                    }
+                </style>
+                <div class="section-heading">Flex Demo</div>
+                <div class="flex-container">
+                    <div class="flex-item" style="order:1;">1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in magni temporibus molestiae quibusdam officiis exercitationem delectus sequi, at esse consectetur, repudiandae, beatae vero totam similique? Vel molestias, modi voluptatum dolores quam nam repellendus dolorem?</div>
+                    <div class="flex-item" style="order:2;">2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem nesciunt modi qui rerum nihil ullam voluptates maxime optio fugiat necessitatibus assumenda itaque quaerat beatae ducimus molestias dolorem ratione, velit doloremque, vitae illo eaque autem? Aspernatur excepturi optio, nihil earum cupiditate cum. Laborum, pariatur nulla.</div>
+                    <div class="flex-item" style="order:3;">3. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda iste, ea ex dolores quo doloremque provident fuga consectetur pariatur animi!</div>
+                    <div class="flex-item" style="order:4;flex-grow:1;align-self:flex-end;">4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reprehenderit maxime minima ullam nesciunt quam, unde natus perferendis magnam in laborum id necessitatibus deleniti aspernatur obcaecati, fugit sunt rerum ab.</div>
+                    <div class="flex-item" style="order:5;flex-grow:1">5. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quo nobis ullam nam reiciendis pariatur quae ab! Tempora in dicta iusto saepe recusandae vitae reiciendis at autem, iure commodi consequatur aspernatur hic unde quae eius quia dolorem magnam facere sapiente?</div>
                 </div>
             </div>
         </main>
