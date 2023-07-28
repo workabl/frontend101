@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
         <style>
+            /* ****************     General      **************** */
             html{
                 font-family: 'Hind', sans-serif;
                 color: #7A7A7A;
@@ -29,6 +30,30 @@
                 padding-inline-start: 18px;
             }
 
+            .heading, .section-heading{
+                color: #212121;
+                font-size: 15px;
+                font-weight: 700;
+                margin-bottom:17px;
+            }
+
+            .text-light{
+                color: #979797;
+            }
+
+            .separator{
+                padding:0px 20px;
+                color:#e5e5e5;
+            }
+
+            .clearfix::after{
+                clear:both;
+                display:table;
+                content:""
+            }
+            
+            /* ****************     Pre-Header      **************** */
+            
             .pre-header{
                 width:100%;
                 height:18px;
@@ -39,7 +64,9 @@
                 font-size: 12px;
                 box-sizing: border-box;
             }
-
+            
+            /* ****************     Header      **************** */
+            
             header{
                 width:100%;
                 border-top: 5px solid #BF7936;
@@ -49,22 +76,36 @@
                 top:0px;
                 background:#fff;
             }
-
-            main{
-                width:100%;
-                padding: 26px 0px 26px 0px;
-            }
             
-            #name{
+            header #profilepic-container{
+                width:100px;
+                vertical-align:top;
+                float:left;
+                margin-right:26px;
+            }
+
+            header #profileinfo-container{
+                padding:0px 26px;
+                vertical-align:top;
+            }
+
+            header #name{
                 color: #212121;
                 font-size: 24px;
                 font-weight: 700;
             }
 
-            #info, #college{
+            header #info, header #college{
                 font-size:15px;
             }
 
+            /* ****************     Main      **************** */
+
+            main{
+                width:100%;
+                padding: 26px 0px 26px 0px;
+            }
+                    
             main section{
                 margin-bottom:26px;
             }
@@ -73,7 +114,7 @@
                 text-align:justify;
             }
 
-            #main-leftcol{
+            main #main-leftcol{
                 vertical-align: top;
                 width:50%;
                 padding-right:13px;
@@ -81,34 +122,25 @@
                 float:left;                            
             } 
 
-            #main-rightcol{
+            main #main-rightcol{
                 vertical-align: top;
                 width:50%;
                 padding-left:13px;
                 box-sizing: border-box;
                 float:right;
             }
-
-            .heading, .section-heading{
-                color: #212121;
-                font-size: 15px;
-                font-weight: 700;
-                margin-bottom:17px;
-            }
-
-            .li-heading{
+            
+            main .li-heading{
                 color: #212121;
                 font-size: 14px;
                 font-weight: 500;
             }
             
-            .li-content{
+            main .li-content{
                 margin-bottom:16px;
-            }
+            }            
 
-            .text-light{
-                color: #979797;
-            }
+            /* ****************     Footer      **************** */
 
             footer{
                 width:100%;
@@ -137,17 +169,6 @@
                 font-size: 12px;
             }
             
-            .separator{
-                padding:0px 20px;
-                color:#e5e5e5;
-            }
-
-            .clearfix::after{
-                clear:both;
-                display:table;
-                content:""
-            }
-            
         </style>
     </head>
     <body>
@@ -156,18 +177,17 @@
         </div>
         <header>
             <div>
-                <div id="profilepic-container" style="width:100px;vertical-align:top;float:left;margin-right:26px;">
+                <div id="profilepic-container">
                     <img id="profilepic" src="./assets/img/photo.png" />
                 </div>
-                <div id="profileinfo-container" style="padding:0px 26px;vertical-align:top;">
+                <div id="profileinfo-container">
                     <div id="name">Vivaan Shekhar Sharma</div>
                     <div id="info" style="margin: 0px 0px 5px 0px">vivaanss@gmail.com<span class="separator">|</span>+91 9733259550<span class="separator">|</span>www.vivaanss.me<span class="separator">|</span>Mumbai</div>
                     <div id="college">United College Of Engineering, Mumbai</div>
                 </div>
             </div>
         </header>
-        <main id="mainContent" style="">
-            
+        <main id="mainContent">            
             <div class="clearfix">
                 <div id="main-leftcol">
                     <section id="profile">
@@ -280,7 +300,17 @@
                         </div>
                     </section>
                 </div>
-            </div>            
+            </div>
+        </main>
+        <footer>
+            <div class="heading">Get In Touch</div>
+            <div class="text-label">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum quas molestias sint.</div>
+            <div id="form-container">
+                <div><textarea id="txtMessage"></textarea></div>
+                <div style="text-align:right"><button id="btnSendMessage">Send Message</button></div>
+            </div>
+        </footer>
+        <div id="demo-section" style="display:none">
             <div>
                 <hr/>
                 <br/>
@@ -325,7 +355,6 @@
                 </div>
             </div>
             <div>
-                <hr/>
                 <br/>
                 <style>
                     .flex-container{
@@ -359,14 +388,6 @@
                     
                 </div>
             </div>
-        </main>
-        <footer>
-            <div class="heading">Get In Touch</div>
-            <div class="text-label">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum quas molestias sint.</div>
-            <div id="form-container">
-                <div><textarea id="txtMessage"></textarea></div>
-                <div style="text-align:right"><button id="btnSendMessage">Send Message</button></div>
-            </div>
-        </footer>
+        </div>
     </body>
 </html>
