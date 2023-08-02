@@ -7,16 +7,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <style>
             /* ****************     General      **************** */
             html{
+                
+            }
+
+            body{
                 font-family: 'Hind', sans-serif;
                 color: #7A7A7A;
                 font-size: 14px;
                 font-style: normal;
-            }
 
-            body{
                 width:100%;
                 max-width:1280px;
                 padding:0px 60px;
@@ -50,6 +53,10 @@
                 clear:both;
                 display:table;
                 content:""
+            }
+
+            .text-justify{
+                text-align: justify;
             }
 
             /* ****************     Pre-Header      **************** */
@@ -159,6 +166,7 @@
             }
             
         </style>
+        
     </head>
     <body>
         <div class="pre-header">
@@ -379,6 +387,10 @@
                             flex-basis:100%;
                         }
                     }
+
+                    @media only screen and (max-width: 576px) {
+                        
+                    }
                     
                 </style>
                 <div class="section-heading">Flex Demo</div>
@@ -392,17 +404,73 @@
                 </div>
                 <br/>
                 <div class="section-heading">Bootstrap Demo</div>
-                <div class="">
-                    <div>
-                        <div>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in magni temporibus molestiae quibusdam officiis exercitationem delectus sequi, at esse consectetur, repudiandae, beatae vero totam similique? Vel molestias, modi voluptatum dolores quam nam repellendus dolorem?</div>
-                        <div>2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem nesciunt modi qui rerum nihil ullam voluptates maxime optio fugiat necessitatibus assumenda itaque quaerat beatae ducimus molestias dolorem ratione, velit doloremque, vitae illo eaque autem? Aspernatur excepturi optio, nihil earum cupiditate cum. Laborum, pariatur nulla.</div>
-                        <div>3. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda iste, ea ex dolores quo doloremque provident fuga consectetur pariatur animi!</div>
-                        <div>4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reprehenderit maxime minima ullam nesciunt quam, unde natus perferendis magnam in laborum id necessitatibus deleniti aspernatur obcaecati, fugit sunt rerum ab.</div>
-                        <div>5. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quo nobis ullam nam reiciendis pariatur quae ab! Tempora in dicta iusto saepe recusandae vitae reiciendis at autem, iure commodi consequatur aspernatur hic unde quae eius quia dolorem magnam facere sapiente?</div>
-                        <div>6. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic id molestiae vero tempore! Assumenda ut sunt velit iusto dolore. Ipsum nostrum a voluptatibus tempora aut, incidunt quasi ducimus similique, obcaecati doloremque nisi odit! Quasi rem sed quis reiciendis et sapiente asperiores fugit enim quibusdam. Enim!</div>
+                <div class="mb-4">
+                    <ul>
+                        <li>Breakpoint (Screen) - xs, sm, md, lg, xl, xxl</li>
+                        <li>Padding - p | top(t), bottom(b), left(s), right(e), left+right(x), top+bottom(y) | Examples: p-1, pt-1, ps-1, px-5</li>
+                        <li>Margin - m | top(t), bottom(b), left(s), right(e), left+right(x), top+bottom(y) | Examples: m-1, mt-1, ms-1, mx-5</li>
+                        <li>Display - d | d-flex d-none d-block</li>
+                        <li>Common Layout Pattern : container > row > col</li>
+                        <li>1-Row = 12-Columns</li>
+                    </ul>
+                </div>
+                <div class="section-heading">Bootstrap Layout Example</div>
+                <div class="container-fluid border p-3">
+                    <div class="row g-4 text-justify">                        
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in magni temporibus molestiae quibusdam officiis exercitationem delectus sequi, at esse consectetur, repudiandae, beatae vero totam similique? Vel molestias, modi voluptatum dolores quam nam repellendus dolorem?</div>
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem nesciunt modi qui rerum nihil ullam voluptates maxime optio fugiat necessitatibus assumenda itaque quaerat beatae ducimus molestias dolorem ratione, velit doloremque, vitae illo eaque autem? Aspernatur excepturi optio, nihil earum cupiditate cum. Laborum, pariatur nulla.</div>
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">3. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda iste, ea ex dolores quo doloremque provident fuga consectetur pariatur animi!</div>
+                        <div class="d-none d-md-block col-12 col-md-6 col-lg-4 col-xl-3">4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reprehenderit maxime minima ullam nesciunt quam, unde natus perferendis magnam in laborum id necessitatibus deleniti aspernatur obcaecati, fugit sunt rerum ab.</div>
+                        <div class="d-none d-md-block col-12 col-md-6 col-lg-4 col-xl-3">5. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quo nobis ullam nam reiciendis pariatur quae ab! Tempora in dicta iusto saepe recusandae vitae reiciendis at autem, iure commodi consequatur aspernatur hic unde quae eius quia dolorem magnam facere sapiente?</div>
+                        <div class="d-none d-md-block col-12 col-md-6 col-lg-4 col-xl-3">6. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic id molestiae vero tempore! Assumenda ut sunt velit iusto dolore. Ipsum nostrum a voluptatibus tempora aut, incidunt quasi ducimus similique, obcaecati doloremque nisi odit! Quasi rem sed quis reiciendis et sapiente asperiores fugit enim quibusdam. Enim!</div>
                     </div>
+                </div>
+                <br/>
+                <div class="section-heading">Bootstrap Component Example</div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://c4.wallpaperflare.com/wallpaper/677/965/260/captain-america-the-first-avenger-wallpaper-preview.jpg" style="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://c4.wallpaperflare.com/wallpaper/677/965/260/captain-america-the-first-avenger-wallpaper-preview.jpg" style="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://c4.wallpaperflare.com/wallpaper/677/965/260/captain-america-the-first-avenger-wallpaper-preview.jpg" style="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <br/>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
                 </div>
             </div>
         </div>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </html>
